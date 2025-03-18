@@ -12,14 +12,24 @@
 #[cmd     ❯](bold green) 
 #"""
 
+#format = """
+#(bold blue) $username $hostname
+#──────────────
+#[╭─project❯](bold red) $directory$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+#[╰─cmd────❯](bold green) 
+#"""
+
 format = """
 (bold blue) $username $hostname
 ──────────────
-[╭─project❯](bold red) $directory$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-[╰─cmd────❯](bold green) 
+[╭─dir❯](bold red) $directory$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+[╰─cmd❯](bold green) 
 """
 
 #format = '$all'
+
+[directory]
+style = "bold red"
 
 [username]
 format = "[$user]($style) @"
@@ -35,4 +45,4 @@ style = "bold yellow underline"
 
 [git_branch]
 format = "[$symbol$branch]($style) " # Controls how the branch name is displayed
-style = "red"  # Change 'green' to any other color
+style = "#ff6f00"  # Change 'green' to any other color
